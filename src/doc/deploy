@@ -1,0 +1,23 @@
+1) OPEN POWERSHELL
+
+2) Change to Working directory
+
+3) mvn package     to build
+
+4a) docker build -t kvk_mailservice .    -Docker image bauen .Dockerfile im  working directory daher mit . am Ende
+
+4b) docker tag kvk_mailservice:latest volkerquillfeldt/myrepo:kvk_mailservice    -aktelles Image markieren
+
+5) docker push volkerquillfeldt/myrepo:kvk_mailservice
+
+6) Mit Server verbinden
+
+7) docker pull volkerquillfeldt/myrepo:kvk_mailservice
+
+8)  docker stop kvk_mailservice
+
+9) docker rm kvk_mailservice
+
+10) docker run --restart always -d  -p 8084:8084 --name=kvk_mailservice volkerquillfeldt/myrepo:kvk_mailservice
+
+
